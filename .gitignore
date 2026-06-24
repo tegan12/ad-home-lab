@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Generated outputs (keep screenshots + sample CSVs; ignore generated reports/exports)
+*.log
+*.tmp
+report*.html
+inventory*.csv
+expiring*.csv
+
+# Secrets — never commit credentials or config containing passwords
+.env
+*.secret
+ost-config.php

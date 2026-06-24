@@ -115,14 +115,3 @@ ad-home-lab/
     └── users.csv             # sample input
 ```
 
-## ▶️ Publish this to GitHub
-```bash
-cd ad-home-lab
-git init
-git add .
-git commit -m "Active Directory home lab + PowerShell onboarding automation"
-git branch -M main
-git remote add origin https://github.com/tegan12/ad-home-lab.git
-git push -u origin main
-```
-Then **pin the repo** on your GitHub profile and add it to LinkedIn → Featured.

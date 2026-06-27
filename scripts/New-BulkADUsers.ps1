@@ -88,7 +88,7 @@ foreach ($u in $users) {
 
     # 2) Skip users that already exist (keeps the script safe to re-run)
     if (Get-ADUser -Filter "SamAccountName -eq '$sam'" -ErrorAction SilentlyContinue) {
-        Write-Warning "User '$sam' already exists — skipping."
+        Write-Warning "User '$sam' already exists - skipping."
         continue
     }
 

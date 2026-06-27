@@ -14,7 +14,7 @@
 .EXAMPLE
     .\Install-LabDomain.ps1
 .NOTES
-    Author: Tegan Wilton.  NEVER run on a production or personal machine — it becomes a domain controller.
+    Author: Tegan Wilton.  NEVER run on a production or personal machine - it becomes a domain controller.
 #>
 [CmdletBinding()]
 param(

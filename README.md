@@ -78,15 +78,27 @@ See [`scripts/New-BulkADUsers.ps1`](scripts/New-BulkADUsers.ps1) and the sample
 
 ## 📸 Screenshots
 
-> _Add your own screenshots here as you build — recruiters love seeing the real thing._
+Real output from the lab build (Windows Server 2022 domain controller, `corp.local`).
 
-| | |
-|---|---|
-| Server Manager — roles installed | `docs/screenshots/server-manager.png` |
-| Active Directory Users and Computers | `docs/screenshots/aduc.png` |
-| DHCP scope with active leases | `docs/screenshots/dhcp.png` |
-| Group Policy Management | `docs/screenshots/gpo.png` |
-| Script output creating users | `docs/screenshots/script-run.png` |
+**Server Manager — AD DS & DNS roles installed on the domain controller**
+
+![Server Manager showing the AD DS and DNS roles](docs/screenshots/server-manager.png)
+
+**Active Directory Users and Computers — department OUs, users and security groups**
+
+![ADUC showing department OUs, users and security groups](docs/screenshots/aduc.png)
+
+**DHCP — the `LAB-LAN` scope (192.168.10.100–.200) serving the domain**
+
+![DHCP console showing the LAB-LAN scope](docs/screenshots/dhcp.png)
+
+**Group Policy Management — the `Lab-Baseline` GPO linked at the domain root**
+
+![Group Policy Management console for corp.local](docs/screenshots/gpo.png)
+
+**Bulk user creation — `New-BulkADUsers.ps1` creating 8 users from CSV (idempotent, supports `-WhatIf`)**
+
+![PowerShell output creating eight AD users](docs/screenshots/script-run.png)
 
 ---
 

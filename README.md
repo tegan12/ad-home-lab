@@ -52,10 +52,11 @@ graph TD
 - **Organisational Units & structure** — OUs per department (Sales, IT, HR, Finance).
 - **Users & groups** — created accounts and department security groups; applied least-privilege
   membership.
-- **Group Policy** — enforced a password policy, mapped a network drive, and applied a desktop
-  restriction to the client.
+- **Group Policy** — enforced the domain password policy (Default Domain Policy) and linked a
+  baseline GPO (`Lab-Baseline`) at the domain root; confirmed it applied on the client with `gpresult`.
 - **File share** — created a shared folder secured with NTFS + share permissions by group.
-- **Domain join** — joined a Windows 11 client and confirmed policies and DHCP applied.
+- **Domain join** — joined a Windows 11 client to `corp.local` and verified Group Policy applied
+  from the DC with `gpresult`.
 - **Automation** — wrote `New-BulkADUsers.ps1` to create users, OUs and groups from a CSV.
 
 ---
@@ -99,6 +100,14 @@ Real output from the lab build (Windows Server 2022 domain controller, `corp.loc
 **Bulk user creation — `New-BulkADUsers.ps1` creating 8 users from CSV (idempotent, supports `-WhatIf`)**
 
 ![PowerShell output creating eight AD users](docs/screenshots/script-run.png)
+
+**Group Policy applied on the domain-joined client — `Default Domain Policy` (`gpresult /scope computer`)**
+
+![gpresult on CLIENT01 showing the Default Domain Policy applied from DC01.corp.local](docs/screenshots/gpresult.png)
+
+**Resultant Set of Policy for the domain user `CORP\jmurphy` signed in on CLIENT01**
+
+![gpresult showing RSOP for domain user jmurphy on CLIENT01](docs/screenshots/gpresult-user.png)
 
 ---
 
